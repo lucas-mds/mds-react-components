@@ -14,8 +14,11 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0 || ^1.7.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-draggable": "^4.2.0",
+    "react-icons": "^3.9.0",
     "react-scripts": "3.4.0",
     "styled-components": "^5.0.1"
   },
@@ -26,9 +29,24 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": ["react-app", "airbnb"],
+    "extends": [
+      "react-app",
+      "airbnb"
+    ],
     "rules": {
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "react/jsx-props-no-spreading": [1, {
+        "custom": "ignore"
+      }],
+      "react/forbid-prop-types": [0]
     }
   },
   "browserslist": {

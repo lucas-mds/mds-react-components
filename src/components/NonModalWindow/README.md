@@ -13,7 +13,9 @@ Simple Usage:
   }}
 />
 ```
-![Image of Simple Usage](imgs/example-01.png)
+Simple usage result:
+
+<img src="imgs/example-01.png" width="300">
 
 Controlled with Icons
 
@@ -36,7 +38,10 @@ Controlled with Icons
   }}
 />
 ```
-![Image of Simple Usage](imgs/example-02.png)
+
+Controlled Non-Modal result:
+
+<img src="imgs/example-02.png" width="300">
 
 Custom Header
 
@@ -54,4 +59,6 @@ Custom Header
   header={<CustomHeader />}
 />
 ```
-![Image of Simple Usage](imgs/example-03.png)
+Custom Header result:
+
+<img src="imgs/example-03.png" width="300">

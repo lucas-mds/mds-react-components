@@ -39,8 +39,8 @@ Custom Header
 
 ```jsx
 <NonModalWindow
-  open={state.open}
-  minimized={state.minimized}
+  open={open}
+  minimized={minimized}
   content="Cool content"
   position="bottom"
   align="right"

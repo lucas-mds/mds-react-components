@@ -1,4 +1,4 @@
-# omg-react-components
+# mds-react-components
 This is a repo containing study cases and stuff that I code to learn or test something.
 
 # Components

@@ -23,15 +23,23 @@ const NonModalWindow = ({
   position,
   align,
   dragProps,
+  header,
 }) => (
   open && (
     <Draggable {...dragProps}>
       <Container position={position} align={align}>
-        <Header>
-          <Title>{title}</Title>
-          <IconButton onClick={toggleMinimized} icon={minimized ? minimizeIcon : maximizeIcon} />
-          <IconButton onClick={toggleOpen} icon={closeIcon} />
-        </Header>
+        {
+          header || (
+            <Header>
+              <Title>{title}</Title>
+              <IconButton
+                onClick={toggleMinimized}
+                icon={minimized ? minimizeIcon : maximizeIcon}
+              />
+              <IconButton onClick={toggleOpen} icon={closeIcon} />
+            </Header>
+          )
+        }
         <Content minimized={minimized}>
           {content}
         </Content>
@@ -42,17 +50,28 @@ const NonModalWindow = ({
 
 NonModalWindow.propTypes = {
   open: PropTypes.bool.isRequired,
-  toggleOpen: PropTypes.func.isRequired,
+  toggleOpen: PropTypes.func,
   minimized: PropTypes.bool.isRequired,
-  toggleMinimized: PropTypes.func.isRequired,
-  minimizeIcon: PropTypes.elementType.isRequired,
-  maximizeIcon: PropTypes.elementType.isRequired,
-  closeIcon: PropTypes.elementType.isRequired,
-  title: PropTypes.string.isRequired,
+  toggleMinimized: PropTypes.func,
+  minimizeIcon: PropTypes.element,
+  maximizeIcon: PropTypes.element,
+  closeIcon: PropTypes.element,
+  title: PropTypes.string,
   content: PropTypes.node.isRequired,
   position: PropTypes.string.isRequired,
   align: PropTypes.string.isRequired,
   dragProps: PropTypes.object.isRequired,
+  header: PropTypes.node,
+};
+
+NonModalWindow.defaultProps = {
+  header: null,
+  minimizeIcon: null,
+  maximizeIcon: null,
+  closeIcon: null,
+  toggleOpen: null,
+  toggleMinimized: null,
+  title: null,
 };
 
 export default NonModalWindow;

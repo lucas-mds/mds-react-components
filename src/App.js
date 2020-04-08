@@ -18,6 +18,17 @@ function App() {
 
   const toggleOpen = () => setState({ ...state, open: !state.open });
 
+  // const customComponents = () => {
+  //   const header = (
+  //     <div>
+  //       <span>custom title</span>
+  //       <button>custom button</button>
+  //     </div>
+  //   );
+
+  //   return header;
+  // };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -38,6 +49,7 @@ function App() {
             bounds: 'parent',
             axis: 'x',
           }}
+          // header={customComponents()}
         />
       </header>
     </div>

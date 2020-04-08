@@ -1,3 +1,7 @@
+## Description
+
+A Non-Modal component that can be dragged, minimized and closed.
+
 Simple Usage:
 ```jsx
 <NonModalWindow

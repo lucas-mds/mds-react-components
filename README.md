@@ -1,6 +1,9 @@
 # omg-react-components
 This is a repo containing study cases and stuff that I code to learn or test something.
 
+# Components
+[Non-Modal Component](src/components/NonModalWindow/README.md)
+
 
 # MIT License
 

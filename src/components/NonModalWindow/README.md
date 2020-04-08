@@ -13,6 +13,7 @@ Simple Usage:
   }}
 />
 ```
+![Image of Simple Usage](imgs/example-01.png)
 
 Controlled with Icons
 
@@ -35,6 +36,8 @@ Controlled with Icons
   }}
 />
 ```
+![Image of Simple Usage](imgs/example-02.png)
+
 Custom Header
 
 ```jsx
@@ -51,3 +54,4 @@ Custom Header
   header={<CustomHeader />}
 />
 ```
+![Image of Simple Usage](imgs/example-03.png)

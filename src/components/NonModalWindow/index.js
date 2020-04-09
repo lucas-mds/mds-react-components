@@ -51,16 +51,16 @@ const NonModalWindow = ({
 NonModalWindow.propTypes = {
   open: PropTypes.bool.isRequired,
   toggleOpen: PropTypes.func,
-  minimized: PropTypes.bool.isRequired,
+  minimized: PropTypes.bool,
   toggleMinimized: PropTypes.func,
   minimizeIcon: PropTypes.element,
   maximizeIcon: PropTypes.element,
   closeIcon: PropTypes.element,
   title: PropTypes.string,
   content: PropTypes.node.isRequired,
-  position: PropTypes.string.isRequired,
-  align: PropTypes.string.isRequired,
-  dragProps: PropTypes.object.isRequired,
+  position: PropTypes.string,
+  align: PropTypes.string,
+  dragProps: PropTypes.object,
   header: PropTypes.node,
 };
 
@@ -72,6 +72,13 @@ NonModalWindow.defaultProps = {
   toggleOpen: null,
   toggleMinimized: null,
   title: null,
+  minimized: false,
+  position: 'bottom',
+  align: 'right',
+  dragProps: {
+    bounds: 'parent',
+    axis: '',
+  },
 };
 
 export default NonModalWindow;

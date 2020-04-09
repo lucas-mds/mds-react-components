@@ -7,6 +7,8 @@ import { FiMinus } from 'react-icons/fi';
 
 // Custom Components
 import NonModalWindow from './components/NonModalWindow';
+import Chat from './components/Chat';
+
 
 function App() {
   const [state, setState] = useState({
@@ -32,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <button type="button" onClick={toggleOpen}>Click me</button>
+        {/* <button type="button" onClick={toggleOpen}>Click me</button>
         <NonModalWindow
           open={state.open}
           toggleOpen={toggleOpen}
@@ -50,7 +52,8 @@ function App() {
             axis: 'x',
           }}
           // header={customComponents()}
-        />
+        />*/}
+        <Chat />
       </header>
     </div>
   );

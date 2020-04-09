@@ -1,6 +1,10 @@
 ## Description
 
-A Non-Modal component that can be dragged, minimized and closed.
+A Non-Modal component that can be dragged, minimized and closed. 
+Made with styled-components and react-draggable.
+
+Simple Idea: 
+<img src="imgs/simple-idea.gif" width="300">
 
 Simple Usage:
 ```jsx

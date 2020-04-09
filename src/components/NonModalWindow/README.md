@@ -4,7 +4,8 @@ A Non-Modal component that can be dragged, minimized and closed.
 Made with styled-components and react-draggable.
 
 Simple Idea: 
-<img src="imgs/simple-idea.gif" width="300">
+
+<img src="imgs/simple-idea.gif" width="600">
 
 Simple Usage:
 ```jsx

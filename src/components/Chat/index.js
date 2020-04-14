@@ -1,31 +1,15 @@
 import React, { useState } from 'react';
-import NonModalWindow from '../NonModalWindow';
-
-import Image from './imgs/Lucas.jpg';
 import { FiMinus } from 'react-icons/fi';
 
-// Styled Components
-import { List, ListItem, ItemLabel, RoundImage, Header } from './styles';
+import Items from './items';
+
+// Components
+import NonModalWindow from '../NonModalWindow';
+import StyledList from '../List';
 
 
-const Content = () => (
-  <div>
-    <List>
-      <ListItem>
-        <RoundImage image={Image} />
-        <ItemLabel>Nice Name</ItemLabel>
-      </ListItem>
-      <ListItem>
-        <RoundImage image={Image} />
-        <ItemLabel>Nice Name</ItemLabel>
-      </ListItem>
-      <ListItem>
-        <RoundImage image={Image} />
-        <ItemLabel>Nice Name</ItemLabel>
-      </ListItem>
-    </List>
-  </div>
-);
+// Styles
+import { Header } from './styles';
 
 const Chat = () => {
   const [state, setState] = useState({
@@ -55,7 +39,7 @@ const Chat = () => {
     <NonModalWindow
       open
       header={<CustomHeader />}
-      content={<Content />}
+      content={<StyledList items={Items} />}
       minimized={state.minimized}
       dragProps={{
         axis: 'x',

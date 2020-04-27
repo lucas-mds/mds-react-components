@@ -4,8 +4,8 @@ import { FiMinus } from 'react-icons/fi';
 import Items from './items';
 
 // Components
-import NonModalWindow from '../NonModalWindow';
-import StyledList from '../List';
+import NonModalWindow from '../../components/NonModalWindow';
+import StyledList from '../../components/List';
 
 
 // Styles

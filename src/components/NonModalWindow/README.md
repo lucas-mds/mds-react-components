@@ -3,7 +3,7 @@
 A Non-Modal component that can be dragged, minimized and closed. 
 Made with styled-components and react-draggable.
 
-Simple Idea: 
+Usage for a chat component: 
 <img src="imgs/simple-idea.gif" width="300">
 
 Simple Usage:
@@ -46,3 +46,5 @@ const [state, setState] = useState({
   }}
 />
 ```
+
+See the 'demos' folder for detailed code.

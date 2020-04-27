@@ -9,64 +9,40 @@ Simple Idea:
 Simple Usage:
 ```jsx
 <NonModalWindow
-  open={open}
-  minimized={minimized}
-  title="Nice Title"
+  open
+  minimized={false}
+  header={<YourHeaderComponent />}
   content="Cool content"
   position="bottom"
-  align="right"
+  align="center"
   dragProps={{
     bounds: 'parent',
     axis: 'x',
   }}
 />
 ```
-Simple usage result:
 
-<img src="imgs/example-01.png" width="300">
-
-Controlled with Icons
+Controlled Usage:
 
 ```jsx
+...
+// You simple control the state of open and minimized.
+const [state, setState] = useState({
+  open: false,
+  minimized: false,
+});
+
+...
 <NonModalWindow
-  open={open}
-  toggleOpen={toggleOpen}
-  minimized={minimized}
-  toggleMinimized={toggleMinimized}
-  minimizeIcon={<FiMinus />}
-  maximizeIcon={<FiMinus />}
-  closeIcon={<MdClose />}
-  title="Nice Non-Modal Title"
+  open={state.open}
+  minimized={state.minimized}
+  header={<ControlledHeader />}
   content="Cool content"
   position="bottom"
-  align="right"
+  align="left"
   dragProps={{
     bounds: 'parent',
     axis: 'x',
   }}
 />
 ```
-
-Controlled Non-Modal result:
-
-<img src="imgs/example-02.png" width="300">
-
-Custom Header
-
-```jsx
-<NonModalWindow
-  open={open}
-  minimized={minimized}
-  content="Cool content"
-  position="bottom"
-  align="right"
-  dragProps={{
-    bounds: 'parent',
-    axis: 'x',
-  }}
-  header={<CustomHeader />}
-/>
-```
-Custom Header result:
-
-<img src="imgs/example-03.png" width="300">

@@ -8,6 +8,7 @@ import Chat from './demos/Chat';
 // Demos
 import SimpleNonModal from './demos/SimpleNonModal';
 import ControlledNonModal from './demos/ControlledNonModal';
+import CameraDevice from './components/CameraDevice';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Chat />
         <SimpleNonModal />
         <ControlledNonModal />
+        <CameraDevice />
       </div>
     </div>
   );

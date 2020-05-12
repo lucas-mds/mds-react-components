@@ -4,6 +4,7 @@ A Non-Modal component that can be dragged, minimized and closed.
 Made with styled-components and react-draggable.
 
 Usage for a chat component: 
+
 <img src="imgs/simple-idea.gif" width="600">
 
 Simple Usage:

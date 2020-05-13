@@ -1,14 +1,19 @@
 import React from 'react';
-import { FaPlay, FaStop } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+
+import { FaPlay, FaStop, FaCamera } from 'react-icons/fa';
 
 import {
   Container,
   CameraStream,
   Controllers,
   ToggleVideo,
+  TakePicture,
 } from './styles';
 
-const CameraDevice = () => {
+const CameraDevice = ({
+  getCapture,
+}) => {
   const [toggleStream, setToggle] = React.useState(true);
 
   React.useEffect(() => {
@@ -20,7 +25,7 @@ const CameraDevice = () => {
           video.srcObject = stream;
         })
         .catch(() => {
-          console.log('Something went wrong!');
+          console.log('Something went wrong =(');
         });
     }
 
@@ -38,6 +43,16 @@ const CameraDevice = () => {
     }
   }, [toggleStream]);
 
+  const getImageBase64 = () => {
+    const videoEl = document.querySelector('#videoElement');
+    const canvas = document.createElement('canvas');
+    canvas.width = videoEl.clientWidth;
+    canvas.height = videoEl.clientHeight;
+    canvas.getContext('2d').drawImage(videoEl, 0, 0, canvas.width, canvas.height);
+
+    getCapture(canvas.toDataURL());
+  };
+
   return (
     <Container>
       <CameraStream
@@ -51,9 +66,16 @@ const CameraDevice = () => {
         <ToggleVideo type="button" onClick={() => setToggle(!toggleStream)}>
           {!toggleStream ? <FaPlay /> : <FaStop />}
         </ToggleVideo>
+        <TakePicture type="button" onClick={getImageBase64}>
+          <FaCamera />
+        </TakePicture>
       </Controllers>
     </Container>
   );
+};
+
+CameraDevice.propTypes = {
+  getCapture: PropTypes.func.isRequired,
 };
 
 export default CameraDevice;

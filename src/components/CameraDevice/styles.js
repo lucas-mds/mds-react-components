@@ -14,14 +14,18 @@ export const CameraStream = styled.video`
 `;
 
 export const Controllers = styled.div`
+  display: flex;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
   opacity: 0;
   transition: opacity 300ms;
 
-  :hover {
-    opacity: 1
+  ${Container}:hover & {
+    opacity: 1;
   }
 `;
 
@@ -29,7 +33,6 @@ export const Controllers = styled.div`
 const Button = styled.button.attrs(() => ({
   type: 'button',
 }))`
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -40,6 +43,7 @@ const Button = styled.button.attrs(() => ({
   background: transparent;
   border: none;
   color: #3ec4cc;
+  cursor: pointer;
   
   
   :focus {
@@ -48,3 +52,4 @@ const Button = styled.button.attrs(() => ({
 `;
 
 export const ToggleVideo = styled(Button)``;
+export const TakePicture = styled(Button)``;

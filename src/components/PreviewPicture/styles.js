@@ -3,24 +3,15 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   position: relative;
-  width: 400px;
-  height: 300px;
-  background-color: grey;
-`;
-
-export const CameraStream = styled.video`
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
+  justify-content: center;
 `;
 
 export const Controllers = styled.div`
-  display: flex;
   position: absolute;
-  width: 100px;
-  margin: auto;
   bottom: 0;
-  left: 0;
-  right: 0;
+  font-size: 30px;
+  color: #3ec4cc;
+
   opacity: 0;
   transition: opacity 300ms;
   font-size: 30px;
@@ -29,7 +20,6 @@ export const Controllers = styled.div`
     opacity: 1;
   }
 `;
-
 
 const Button = styled.button.attrs(() => ({
   type: 'button',
@@ -52,5 +42,14 @@ const Button = styled.button.attrs(() => ({
   }
 `;
 
-export const ToggleVideo = styled(Button)``;
-export const TakePicture = styled(Button)``;
+export const DeletePicture = styled(Button)``;
+
+export const Placeholder = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  background-color: grey;
+  font-size: 90px;
+`;
